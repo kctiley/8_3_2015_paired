@@ -66,12 +66,29 @@
 // dice1.rollDice(15);
 // console.log(dice1.value);
 
+// function Dice(){
+//   this.value = [];
+//   this.rollDice = function(numberOfDice, sidesOfDice){
+//     var newArray = [];
+//     for(var i=0; i<numberOfDice; i++){
+//       newArray.push(Math.floor(Math.random() * sidesOfDice +1));
+//     };
+//     this.value = newArray;
+//    };
+// }
+
+// var dice1 = new Dice();
+// dice1.rollDice(15, 8);
+// console.log(dice1.value);
+
+
 function Dice(){
   this.value = [];
   this.rollDice = function(numberOfDice, sidesOfDice){
     var newArray = [];
+    var dimensions = Number(sidesOfDice) || 6
     for(var i=0; i<numberOfDice; i++){
-      newArray.push(Math.floor(Math.random() * sidesOfDice +1));
+      newArray.push(Math.floor(Math.random() * dimensions +1));
     };
     this.value = newArray;
    };
@@ -80,9 +97,9 @@ function Dice(){
 var dice1 = new Dice();
 dice1.rollDice(15, 8);
 console.log(dice1.value);
-
-
-
+console.log(=======================);
+dice1.rollDice(15);
+console.log(dice1.value);
 
 
 
