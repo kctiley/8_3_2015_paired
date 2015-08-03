@@ -9,16 +9,31 @@
 // console.log(dice.rolled)
 
 
+// var dice = {
+//   rolled: [],
+//    diceRoll: function(numberOfDice){
+//     var newArray = [];
+//     for(var i=0; i<numberOfDice; i++){
+//       newArray.push(Math.floor(Math.random() * 6));
+//     }
+//     this.rolled = newArray;
+//    }
+//  }
+
+//  dice.diceRoll(3);
+//  console.log(dice.rolled)
+
+
 var dice = {
   rolled: [],
-   diceRoll: function(numberOfDice){
+   diceRoll: function(numberOfDice, sidesOfDice){
     var newArray = [];
     for(var i=0; i<numberOfDice; i++){
-      newArray.push(Math.floor(Math.random() * 6));
+      newArray.push(Math.floor(Math.random() * sidesOfDice + 1));
     }
     this.rolled = newArray;
    }
  }
 
- dice.diceRoll(3);
+ dice.diceRoll(3, 8);
  console.log(dice.rolled)
